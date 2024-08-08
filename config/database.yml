@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: postgres
+
+
+test:
+  <<: *default
+  database: customer_demo_test
+  host: localhost
+
+# production:
+#   <<: *default
+#   database: <%= Rails.application.credentials.dig(:database, :db_name) %>
+#   username: <%= Rails.application.credentials.dig(:database, :user_name) %>
+#   password: <%= Rails.application.credentials.dig(:database, :password) %> 
+#   host: localhost
+
+development:
+  <<: *default
+  database: customer_order_demo
+  #tonite_dev  actual db
+  host: localhost
