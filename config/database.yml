@@ -24,3 +24,12 @@ development:
   database: customer_order_demo
   #tonite_dev  actual db
   host: localhost
+
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: postgres
+  database: customer_order_demo_stage
